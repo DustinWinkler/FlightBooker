@@ -1,0 +1,23 @@
+
+<%= render 'search_form' %> <br>
+<% unless @flights.nil? %> 
+<table>
+  <tr>
+    <th>Departing Airport |</th>
+    <th>Arriving Airport |</th>  
+    <th>Date |</th>
+    <th>Book it!</th>
+  </tr>
+   
+<% @flights.each do |flight| %>
+  <tr>
+    <td><%= flight.departing_airport.code %></td>  
+    <td><%= flight.arriving_airport.code %></td>
+    <td><%= flight.date.strftime('%b %e, %l:%M %p') %></td>
+    <td><%= simple_form_for @booking, url: 'bookings/new', method: 'get' do |form| %>
+          <%= form.hidden_field :flight_id, :value => flight.id %>
+          <%= form.submit %>
+        <% end %></td>
+<% end %>
+<% end %>
+</table> <br>

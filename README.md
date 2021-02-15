@@ -1,0 +1,1 @@
+This is an app that will have a mock flight booking form. It demonstrates the ability to pre populate forms with objects from the database. It also demonstrates nested forms. The Odin Project link: https://www.theodinproject.com/courses/ruby-on-rails/lessons/building-advanced-forms

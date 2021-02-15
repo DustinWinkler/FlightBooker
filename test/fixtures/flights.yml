@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  passenger_name: MyString
+  date: 2021-02-14 13:04:41
+  duration: 1
+
+two:
+  passenger_name: MyString
+  date: 2021-02-14 13:04:41
+  duration: 1

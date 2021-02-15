@@ -1,0 +1,12 @@
+Airport:
+code:string i.e SFO, NYC
+has_many flights as arriving_flights
+has_many flights as departing_flights
+
+Flight:
+passenger_name:string
+from_airport:references i.e belongs_to airport
+to_airport:references i.e belongs_to airport
+date:datetime
+flight_duration:string or datetime
+

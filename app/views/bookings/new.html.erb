@@ -1,0 +1,12 @@
+<h3>Book your Flight!</h3>
+<%= @booking.flight_id %>
+<%= form_with model: @booking, url: {action: 'create'} do |form| %>
+  <%= form.hidden_field :flight_id, value: params[:booking][:flight_id] %>
+  <%= form.fields_for :passenger do |passenger_form| %>
+    <%= passenger_form.label :name %>
+    <%= passenger_form.text_field :name %>
+    <%= passenger_form.label :email %>
+    <%= passenger_form.text_field :email %>
+  <% end %>
+  <%= form.submit %>
+<% end %>
